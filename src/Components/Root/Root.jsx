@@ -5,7 +5,7 @@ import { Outlet } from "react-router";
 
 function Root() {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       {/* Nav bar  */}
       <Navbar></Navbar>
 

@@ -1,6 +1,21 @@
 import React from "react";
+import { Link, NavLink } from "react-router";
 
 function Navbar() {
+  const link = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/listed-book">Listed Book</NavLink>
+      </li>
+      <li>
+        <NavLink to="/Page-to-read">Pages to Read</NavLink>
+      </li>
+    </>
+  );
+
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -26,28 +41,15 @@ function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {link}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link to="/" className="btn btn-ghost text-xl">
+          Book Vibe
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <a>Listed Book</a>
-          </li>
-          <li>
-            <a>Pages to Read</a>
-          </li>
-        </ul>
+        <ul className="menu menu-horizontal px-1">{link}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>
