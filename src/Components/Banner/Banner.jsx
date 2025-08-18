@@ -1,5 +1,6 @@
 import React from "react";
 import Bookimage from "../../assets/books.jpg";
+import { Link } from "react-router";
 
 function Banner() {
   return (
@@ -15,7 +16,7 @@ function Banner() {
 
           {/* Text Content */}
           <div className="text-center lg:text-left max-w-xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
               Books to freshen up <br /> your bookshelf
             </h1>
             <p className="py-4 md:py-6 text-sm md:text-base lg:text-lg">
@@ -23,7 +24,9 @@ function Banner() {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn btn-primary">View The List</button>
+            <Link to="/listed-book">
+              <button className="btn btn-primary">View The List</button>
+            </Link>
           </div>
         </div>
       </div>
