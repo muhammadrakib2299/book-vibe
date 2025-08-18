@@ -52,7 +52,8 @@ function Navbar() {
         <ul className="menu menu-horizontal px-1">{link}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn mx-2">Sign In</a>
+        <a className="btn mx-2">Sign Up</a>
       </div>
     </div>
   );
