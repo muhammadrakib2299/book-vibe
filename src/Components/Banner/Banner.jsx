@@ -3,7 +3,7 @@ import Bookimage from "../../assets/books.jpg";
 
 function Banner() {
   return (
-    <div className="my-5">
+    <div className="my-8">
       <div className="hero bg-base-200 px-5 py-10 lg:p-16">
         <div className="hero-content flex flex-col lg:flex-row-reverse items-center lg:items-start gap-8">
           {/* Image */}
