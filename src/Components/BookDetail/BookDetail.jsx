@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import { addToStoredList } from "../../util/stordToDB";
 
 function BookDetail() {
   const { bookId } = useParams();
@@ -19,6 +20,10 @@ function BookDetail() {
     publisher,
     yearOfPublishing,
   } = book;
+
+  const handleMarkAsRead = (id) => {
+    addToStoredList(id);
+  };
 
   return (
     <div className="py-10">
@@ -91,7 +96,12 @@ function BookDetail() {
 
             {/* Buttons */}
             <div className="flex gap-4">
-              <button className="btn btn-primary">Read</button>
+              <button
+                onClick={() => handleMarkAsRead(bookId)}
+                className="btn btn-primary"
+              >
+                Mark as Read
+              </button>
               <button className="btn btn-outline">Wishlist</button>
             </div>
           </div>
