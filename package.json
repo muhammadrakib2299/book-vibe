@@ -2,6 +2,12 @@
   "name": "book-vibe",
   "private": true,
   "version": "0.0.0",
+  "description": "Book Vibe — React (Vite) book-listing app practice project with React Router, Tailwind CSS and DaisyUI.",
+  "author": "Md. Rakib (https://devrakib.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhammadrakib2299/book-vibe.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
